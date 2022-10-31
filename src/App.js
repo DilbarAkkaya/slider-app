@@ -1,8 +1,8 @@
-import { Component, useState } from 'react';
+import { Component, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.css';
 
-  class Slider extends Component {
+  /* class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,11 +42,14 @@ import './App.css';
     )
 }
 }  
-
-/* const Slider = (props) => {
+ */
+const Slider = (props) => {
 
   const [ slide, setSlide ] = useState(0);
   const [ autoplay, setAutoplay ] = useState(false);
+  useEffect(()=>{
+    document.title = `Slide: ${slide}`;
+  }, [slide])
 
   function changeSlide(i) {
     setSlide(slide => slide + i);
@@ -69,7 +72,7 @@ import './App.css';
       </div>
     </Container>
   )
-} */
+}
 
 function App() {
   return (

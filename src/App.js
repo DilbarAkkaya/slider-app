@@ -47,7 +47,7 @@ const Slider = (props) => {
   }
 
   function toggleAutoplay() {
-    setAutoplay(!autoplay);
+    setAutoplay(autoplay => !autoplay);
   }
 
   return (

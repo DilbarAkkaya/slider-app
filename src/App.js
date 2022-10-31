@@ -38,7 +38,7 @@ import './App.css';
 }  */
 
 const calcValue = () => {
-  return Math.random() *(50-1) + 1;
+  return Math.floor(Math.random() *(50-1) + 1);
 }
 const Slider = (props) => {
 

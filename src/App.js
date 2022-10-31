@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { Component, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.css';
 
-/*  class Slider extends Component {
+  class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = {
       autoplay:false,
       slide: 0
     }
+  }
+  componentDidMount(){
+    document.title = `Slide: ${this.state.slide}`;
+  }
+  componentDidUpdate(){
+    document.title = `Slide: ${this.state.slide}`;
   }
   changeSlide = (i) => {
     this.setState(({slide}) => ({
@@ -35,14 +41,11 @@ import './App.css';
       </Container>
     )
 }
-}  */
+}  
 
-const calcValue = () => {
-  return Math.floor(Math.random() *(50-1) + 1);
-}
-const Slider = (props) => {
+/* const Slider = (props) => {
 
-  const [ slide, setSlide ] = useState(calcValue);
+  const [ slide, setSlide ] = useState(0);
   const [ autoplay, setAutoplay ] = useState(false);
 
   function changeSlide(i) {
@@ -66,7 +69,7 @@ const Slider = (props) => {
       </div>
     </Container>
   )
-}
+} */
 
 function App() {
   return (

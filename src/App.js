@@ -37,9 +37,12 @@ import './App.css';
 }
 }  */
 
+const calcValue = () => {
+  return Math.random() *(50-1) + 1;
+}
 const Slider = (props) => {
 
-  const [ slide, setSlide ] = useState(0);
+  const [ slide, setSlide ] = useState(calcValue);
   const [ autoplay, setAutoplay ] = useState(false);
 
   function changeSlide(i) {
